@@ -13,5 +13,5 @@ to run the code on the board
 sudo python2 Main.py 
 
 create an account in this url https://smartwatermanagement.pythonanywhere.com/ to use webapi.py to send data to server and control 
-and monitor device from the server
+and monitor device from the server and also update the repective username and password in webapi.py with device name and password
 
