@@ -21,21 +21,13 @@ def sendData(level):
 		"device":"dcbadcba",
 		"password":"dcbadcba"
 		}
-		response=requests.post(url,auth=('amar','dhruvadhruva'),data=values)
+		#add your username and password in the below commented line
+		#response=requests.post(url,auth=(username,password),data=values)  
 		return response.status_code
 	except (requests.exceptions.Timeout,requests.exceptions.HTTPError,requests.exceptions.ConnectionError) as e:
 			print "Error2",e
 			raise ValueError
-    
-#def sendStatus():
-#	values={
-		
- #       "device": "dcbadcba",
-  #      "on":"false",
-  #      "order":"true"
-  #      }
-#	response=requests.put(url_status,auth=('amar','dhruvadhruva'),data=values)
-#	print response.status_code
+ 
 def sendOn(state):
 	try:
 		values={
@@ -45,7 +37,8 @@ def sendOn(state):
 		"order":state
 		}
 		print values
-		response=requests.put(url_mystatus,auth=('dcbadcba','dcbadcba'),data=values)
+		#add device username and password below
+		#response=requests.put(url_mystatus,auth=(username,password),data=values)
 		print response.status_code
 	except (requests.exceptions.Timeout,requests.exceptions.HTTPError,requests.exceptions.ConnectionError) as e:
 			print "Error2"
